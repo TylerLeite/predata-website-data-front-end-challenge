@@ -20,7 +20,23 @@ export const groupByLanguage = createSelector(
   [selectData, getSelectedLanguages],
   (data, languages) => {
     // TODO: Implement
-    return;
+    return languages.map(lang => {
+      let info = {
+        'language': lang.name,
+        'views': data.filter(
+            website =>
+              website.tags.filter(tag =>
+                lang.name.includes(tag.name)
+              ).length > 0
+          )
+          .map(website => website.website_views)
+          .reduce((a, b) => a.concat(b), [])
+          .map(view_obj => Number(view_obj.count))
+          .reduce((a, b) => a + b, 0)
+      }
+      return info;
+    });
+
   }
 );
 

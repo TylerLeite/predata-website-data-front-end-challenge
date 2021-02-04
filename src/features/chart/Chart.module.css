@@ -14,12 +14,23 @@
   border: 2px gray solid;
   border-radius: 1%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+
+  width: 600px;
 }
 
 /* TODO */
 .header__text {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 12px;
 }
 
 /* TODO */
 .header__label {
+  position: absolute;
+  position: absolute;
+  top: -25px;
+  left: 25px;
+  background: white;
 }

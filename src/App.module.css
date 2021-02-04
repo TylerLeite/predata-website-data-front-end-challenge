@@ -4,8 +4,21 @@
 
 /* TODO */
 .time_series__header {
+  margin: 0 auto;
+  text-align: center;
+  padding: 60px 0;
 }
 
 /* TODO */
 .time_series__chart_row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.time_series__chart_row > * {
+  flex-basis: 50%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
